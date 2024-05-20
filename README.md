@@ -3,7 +3,8 @@
 This repository contains the source code for my personal portfolio website, built using the Foundation framework. This personal portfolio website aims to provide visitors with information about my background and a comprehensive list of my academic history, projects, and special interests.
 
 ## Development
-The 'Featured Projects' and 'Special Interest' pages are in active development; several pre-existing projects need to be added to each page.
+- The 'Featured Projects' and 'Special Interest' pages are in active development; several pre-existing projects need to be added to each page.
+- Actively researching Meta and YouTube APIs for embedded content.
 
 ## Pages
 ### 1. Personal Overview
