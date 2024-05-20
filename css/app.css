@@ -45,6 +45,18 @@
 	--lightest_gray_purple: #A58AE3;
 }
 
+/* Redirect Page */
+.redirect{
+	color: white;
+	font-size: 20pt;
+	text-align: center;
+	font-weight: bold;
+	background-color: var(--lightest_gray_purple);
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border-radius: 1em;
+}
+
 /* Everything outside of media queries relates either to global styles or mobile */
 
 /* Navigation Menu */
