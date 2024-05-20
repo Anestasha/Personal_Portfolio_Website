@@ -1,0 +1,465 @@
+/* Organization:
+	1. Global variables
+	2. Global Styles
+		2.a. Navigation
+		2.b. Links
+		2.c. Generic (section, wrapper, etc.)
+
+		2.1: Media Queries for Global styles
+			-Contains content from 2.a-2.c.
+	3. Styles by page
+		1. Personal Overview
+		2. Classes
+		3. Highlighted Projects
+		4. Hobbies & Passions
+*/
+
+/* 		
+		Primary Color Theme
+			darkest purple #25064C
+			dark purple #36175E
+			purple #553285
+			light purple #7B52AB
+			lightest purple #9768D1
+		Secondary Theme (non-nav, non-footer links)
+			dark green [Visited] #325935
+			green [Link] #5E8C5D
+			pale green [hover] #97BF7A
+
+*/
+
+/* global styles */
+:root{
+	--darkest_purple: #25064C;
+	--dark_purple: #36175E;
+	--purple: #553285;
+	--light_purple: #7B52AB;
+	--lightest_purple: #9768D1;
+	--dark_green_Visited: #325935;
+	--green_Link: #5E8C5D;
+	--pale_green_hover: #97BF7A;
+	--darkest_gray_purple: #3F3557;
+	--dark_gray_purple: #5B4C7D;
+	--gray_purple: #6E5C97;
+	--light_gray_purple: #7764A4;
+	--lightest_gray_purple: #A58AE3;
+}
+
+/* Everything outside of media queries relates either to global styles or mobile */
+
+/* Navigation Menu */
+header{
+	background-color: var(--darkest_gray_purple);
+	box-shadow: 5px 5px var(--light_purple);
+	text-align: center;
+	margin-bottom: 1em;
+	padding: 1em;
+	font-family: Georgia, serif;
+	font-weight: bold;
+	width: 100vw;
+}
+
+header h1{
+	margin-top: 0.3em;
+	color: white;
+	font-family: Georgia, serif;
+	font-weight: bold;
+}
+
+nav{
+	padding-bottom: 0.3em;
+}
+
+nav ul{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	list-style-type: none;
+	margin: 1em;
+	align-items: center;	/*	THIS IS WAY BETTER BUT WE STILL NEED TO ADJUST FOR CHANGING SIZE	*/
+}
+
+nav a{
+	background-color: var(--light_purple);
+	border-radius: 1em;
+	box-shadow: 0.2em 0.2em var(--lightest_gray_purple);
+	margin-bottom: 0.5em;
+	margin-right: 0.3em;
+	margin-left: 0.3em;	
+	padding: 0.5em 1em;
+	text-decoration: none;
+	color: white;
+}
+
+nav li{
+	color: white;
+	font-weight: bold;
+}
+  
+/* Global Styles - Created */
+a:visited {
+	color: white;
+}
+
+a{
+	color: var(--dark_green_Visited);
+	text-decoration-line: underline;
+}
+
+#wrapper{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+	background-image: url(../media/style/mathpattern_a.png), 
+	linear-gradient(90deg, rgba(85,50,133,1) 0%, rgba(151,104,209,1) 50%, rgba(85,50,133,1) 100%);
+	font-family: Verdana, Arial, sans-serif;
+}
+
+section{
+	background-color: var(--lightest_gray_purple);
+	border: 1px solid var(--darkest_purple);
+	border-radius: 1em;
+	padding: 0.5em;
+	box-shadow: 0.3em 0.3em var(--darkest_gray_purple);
+}
+
+footer{
+	text-align: center;
+	margin-top: 1em;
+	background-color: var(--darkest_gray_purple);
+	color: white;
+	font-size: 0.9em;
+	font-style: italic;
+	padding: 0.3em;
+	justify-content: center;
+	border-radius: 1.5em;
+	box-shadow: 0.2em 0.2em var(--light_purple);
+}
+
+footer p{
+	padding-top: 1em;
+}
+
+footer a{
+	color: white;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em){
+	nav ul {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		justify-content: center;
+	}
+
+	nav li {
+		padding: 0.75em;
+		padding-right: 4em;
+		padding-left: 4em;
+		min-height: 5rem;
+	}
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em){
+	nav ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em){
+	nav ul{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+	}
+}
+
+/* Personal Overview Page */
+#intro h2, #intro h3{
+	text-align: center;
+	font-weight: bold;
+}
+
+#intro{
+	display: flex;
+	flex-direction: column;
+}
+
+#intro h3{
+	margin-bottom: .5em;
+}
+
+#intro p{
+	text-indent: 0.5em;
+}
+
+/* Figure CSS applied to 'Special Interests' page */
+figure{
+	border: 1px solid var(--darkest_purple);
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+figcaption{
+	margin-top: 0.2em;
+}
+
+.date{
+	font-weight: bold;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em){
+	#bio figure{
+		float: left;
+		max-width: 45vw;
+	}
+
+	#bio .grad_2024{
+		float: right;
+		margin-left: 0.5em;
+	}
+}
+
+/* Classes Page */
+#classes_by_semester{
+	display: flex;
+	align-items: center;
+}
+
+.class_name{
+	font-weight: bold;
+}
+
+.classes h3{
+	text-align: left;
+	font-weight: normal;
+	text-decoration: underline;
+}
+
+label{
+	margin-right: 1em;
+	font-weight: bold;
+}
+
+select{
+	width: 30vw;
+	background-color: var(--lightest_gray_purple);
+	color: var(--darkest_purple);
+	font-weight: bold;
+	border: 2px dotted var(--darkest_purple);
+}
+
+select option{
+	background-color: var(--lightest_gray_purple);
+}
+
+select:focus{
+	background-color: var(--lightest_gray_purple);
+	border: 1px solid var(--darkest_purple);
+}
+
+.description{
+	font-size: small;
+	font-style: italic;
+	padding-bottom: 5em;
+}
+
+#classes_by_subject div{
+	background-color: var(--lightest_gray_purple);
+}
+
+.languages {
+	position: relative;
+	border-bottom: 1px dotted var(--darkest_purple);
+}
+
+.languages:before {
+	content: attr(data-hover);
+	visibility: hidden;
+	opacity: 0;
+	width: max-content;
+	background-color: black;
+	color: #fff;
+	/* text-align: center; */
+	border-radius: 5px;
+	padding: 5px 5px;
+	transition: opacity 1s ease-in-out;
+	max-width: 80vw;
+
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	top: 110%;
+}
+
+.languages:hover:before{
+	opacity: 1;
+	visibility: visible;
+}
+
+table, thead, tbody, tr, td{
+	background-color: var(--lightest_gray_purple);
+	/* border: 2px solid var(--lightest_gray_purple); */
+}
+
+table, tr, tbody{
+	border: 2px solid var(--lightest_gray_purple);
+}
+
+tbody, tr, td{
+	/* border: 2px solid var(--lightest_gray_purple); */
+}
+
+.detail{
+	font-weight: bold;
+}
+
+.first td{
+	border-top: 2px solid var(--darkest_gray_purple);
+	border-left: 2px solid var(--lightest_gray_purple);
+	border-right: 2px solid var(--lightest_gray_purple);
+	border-bottom: 2px solid var(--lightest_gray_purple);
+}
+
+/* Highlighted Projects Page */
+
+#projects h2, #projects h3, #projects h4, #projects h5{
+	font-weight: bold;
+}
+
+.chapter{
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.thumbnail{
+	height: 10em;
+}
+
+	/* Work Feature Block - Foundation Building Block
+		- https://get.foundation/building-blocks/blocks/work-feature-block.html
+	*/
+
+.work-feature-block {
+	padding: 10px;
+	border-top: 1px dotted var(--darkest_purple);
+	border-bottom: 1px dotted var(--darkest_purple);
+	border-radius: 2em;
+	align-items: center;
+}
+
+.work-feature-block-image {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+}
+
+.work-feature-block-phone-video {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+	max-width: 50vw;
+}
+
+.work-feature-block-header{
+	font-weight: bold;
+	padding-top: .5em;
+}
+
+	/* Product Image Gallery - Foundation Building Block
+	- https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html
+	*/
+.product-image-gallery {
+	background-color: var(--lightest_purple);
+	border-radius: 1em;
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.pdp-product-image {
+	margin-bottom: 20px;
+}
+
+.product-thumbs a {
+	margin-left: 8px;
+	margin-right: 8px;
+	padding: 0 !important;
+}
+
+.product-thumbs a img {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	border: solid 4px #fefefe;
+	border-radius: 0;
+	box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+	line-height: 0;
+	border-radius: 3px;
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em){
+	.work-feature-block-phone-video {
+		max-height: 40vh;
+	}
+
+	.work-feature-block-header{
+		padding-top: 0;
+	}
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em){
+	
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em){
+
+}
+
+
+/* Hobbies & Passions Page */
+#posters{
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+}
+
+
+	  
+	  
+
+
+
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em){
+	#posters img{
+		max-width: 30vw;
+	}
+}
+
+/* Large devices such as laptops (1024px and up) */
+@media only screen and (min-width: 64em){
+	
+}
+
+/* Largest devices such as desktops (1280px and up) */
+@media only screen and (min-width: 80em){
+
+}

@@ -1,0 +1,364 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS' Class History</title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="icon" href="/media/content/favicon.png" type="image/x-icon">
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function setFirstSem() {
+        const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
+        semesters.forEach(semester => {
+          document.getElementById(`${semester}_classes`).style.display = semester === "sp24" ? "block" : "none";
+        });
+      });
+    </script>
+    
+  </head>
+    <body>
+      
+        <header>
+          <h1>Anna Steffens' Portfolio</h1>
+          <nav>
+            <ul>
+              <a href="portfolio.html"><li>Personal Overview</li></a>
+              <a href="classhistory.html"><li>Class History</li></a>
+              <a href="featuredprojects.html"><li>Featured Projects</li></a>
+              <a href="specialinterests.html"><li>Special Interests</li></a>
+            </ul>
+          </nav>
+        </header>
+
+      <div id="wrapper">
+        <main>
+          <section>
+            <div>
+              <h2>Degree-Specific Classes by Semester</h2>
+              <p>
+                Use the dropdown menu to select a semester. The listed classes exclude core classes in favor of focusing on degree requirements.
+              <span class="description">
+                Hover over underlined class names to see the main languages and tools used that semester.
+                Click on mobile devices.
+              </span>
+            </p>
+                <div id="classes_by_semester">
+                <label for="semesters_dropdown">Choose a semester:</label>
+                <select name="semester" id="semesters_dropdown">
+                  <option value="sp24">Spring 2024</option>
+                  <option value="fa23">Fall 2023</option>
+                  <option value="sp23">Spring 2023</option>
+                  <option value="fa22">Fall 2022</option>
+                  <option value="sp22">Spring 2022</option>
+                  <option value="fa21">Fall 2021</option>
+                  <option value="sp21">Spring 2021</option>
+                  <option value="fa20">Fall 2020</option>
+                  <option value="sp20">Spring 2020</option>
+                  <option value="fa19">Fall 2019</option>
+                  <option value="sp19">Spring 2019</option>                  
+                </select>
+              </div>
+              <hr>
+            </div>
+            <div id="sp19_classes" class="classes">
+              <h3>Spring 2019</h3>
+              <h4><span class="class_name">CHEM 111:</span> Principles of Chemistry I</h4>
+              <h4><span class="languages" data-hover="Processing, MIT App Inventor"><span class="class_name">CS 108:</span> Introduction to Computer Science</span></h4>
+            </div>
+            <div id="fa19_classes" class="classes">
+              <h3>Fall 2019</h3>
+              <h4><span class="class_name">ENGR 120:</span> Introduction to Engineering Careers</h4>
+              <h4><span class="class_name">ENGR 210:</span> Engineering Statics</h4>
+              <h4><span class="class_name">MATH 175:</span> Calculus II</h4>
+              <h4><span class="class_name">PHYS 211:</span> Engineering Physics I</h4>
+            </div>
+            <div id="sp20_classes" class="classes">
+              <h3>Spring 2020</h3>
+              <h4><span class="class_name">MATH 253:</span> Statistical Methods</h4>
+              <h4><span class="class_name">MATH 275:</span> Calculus III</h4>
+              <h4><span class="class_name">PHYS 212:</span> Engineering Physics II</h4>
+            </div>
+            <div id="fa20_classes" class="classes">
+              <h3>Fall 2020</h3>
+              <h4><span class="languages" data-hover="Python"><span class="class_name">CS 111:</span> Foundations of Programming</span></h4>
+              <h4><span class="languages" data-hover="SQL - emphasis on database querying"><span class="class_name">CS 226:</span> Structured Query Language (SQL)</span></h4>
+              <h4><span class="class_name">MATH 300:</span> Introduction to Mathematical Reasoning <span class="classDetail">(proofs)</span></h4>
+              <h4><span class="class_name">MATH 320:</span> Probability and Statistics <span class="classDetail">(calculus based)</span></h4>
+            </div>
+            <div id="sp21_classes" class="classes">
+              <h3>Spring 2021</h3>
+              <h4><span class="languages" data-hover="C++"><span class="class_name">CS 211:</span> Computer Science II</span></h4>
+              <h4><span class="class_name">ENGR 240:</span> Circuits</h4>
+              <h4><span class="class_name">MATH 186:</span> Discrete Mathematics</h4>
+              <h4><span class="class_name">MATH 285:</span> Euclidean Geometry</h4>
+            </div>
+            <div id="fa21_classes" class="classes">
+              <h3>Fall 2021</h3>
+              <h4><span class="class_name">BIOF 100:</span> Introduction to Bioinformatics</h4>
+              <h4><span class="class_name">CS 101:</span> CS Seminar</h4>
+              <h4><span class="languages" data-hover="MIPS, C, Python"><span class="class_name">CS 250:</span> Computer Organization and Architechure</span></h4>
+            </div>
+            <div id="sp22_classes" class="classes">
+              <h3>Spring 2022</h3>
+              <h4><span class="languages" data-hover="Command-line usage & scripting using a common shell, C/C++"><span class="class_name">CS 253:</span> Introduction to Systems Programming</span></h4>
+              <h4><span class="languages" data-hover="C++"><span class="class_name">CS 311:</span> Algorithms and Data Structures</span></h4>
+              <h4><span class="class_name">MATH 460:</span> Abstract Algebra I</h4>
+            </div>
+            <div id="fa22_classes" class="classes">
+              <h3>Fall 2022</h3>
+              <h4><span class="languages" data-hover="R"><span class="class_name">CS 445:</span> Databases and Knowledge Management</span></h4>
+              <h4><span class="class_name">MATH 313:</span> Number Theory</h4>
+              <h4><span class="class_name">PHYS 205:</span> Descriptive Astronomy</h4>
+            </div>
+            <div id="sp23_classes" class="classes">
+              <h3>Spring 2023</h3>
+              <h4><span class="class_name">MATH 340:</span> Linear Algebra</h4>
+              <h4><span class="class_name">MATH 480:</span> Real Analysis I</h4>
+              <h4><span class="class_name">MATH 490:</span> Math History</h4>
+            </div>
+            <div id="fa23_classes" class="classes">
+              <h3>Fall 2023</h3>
+              <h4><span class="languages" data-hover="HTML, CSS"><span class="class_name">CITPT 111:</span> Web Development Basics</span></h4>
+              <h4><span class="languages" data-hover="HTML, CSS"><span class="class_name">CITPT 117:</span> Web Design Fundamentals</span></h4>
+              <h4><span class="languages" data-hover="Ionic with React, TypeScript, HTML, CSS"><span class="class_name">CS 360:</span> Software Engineering</span></h4>
+              <h4><span class="class_name">CYB 360:</span> Cyber Management</h4>
+            </div>
+            <div id="sp24_classes" class="classes">
+              <h3>Fall 2023</h3>
+              <h4><span class="languages" data-hover="C/C++, HTML/CSS, WebAssembly (Emscripten), JavaScript"><span class="class_name">CS 435:</span> Computer Networking</span></h4>
+              <h4><span class="languages" data-hover="C"><span class="class_name">CS 430:</span> Operating Systems</span></h4>
+              <h4><span class="class_name">CS 401:</span> Future Professional Seminar</h4>
+              <h4><span class="languages" data-hover="Ionic with React, TypeScript, HTML, CSS"><span class="class_name">CS 480:</span> Capstone</span></h4>
+            </div>
+            <hr>
+            <div id="classes_by_subject">
+              <h2>Degree-Specific Classes by Subject</h2>
+              <table>
+                <thead>
+                  <tr class="detail">
+                    <td>Computer Science</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Class</td>
+                    <td>Semester</td>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="first">
+                    <td>CS 401: Future Professional Seminar</td>
+                    <td>Spring 2024</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="C">CS 430: Operating Systems</span></td>
+                    <td>Spring 2024</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="C/C++, HTML/CSS, WebAssembly (Emscripten), JavaScript">CS 435: Computer Networking</span></td>
+                    <td>Spring 2024</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="Ionic with React, TypeScript, HTML, CSS">CS 480: Capstone</span></td>
+                    <td>Spring 2024</td>
+                  </tr>
+                  <tr>
+                    <td>CYB 360: Cyber Management</td>
+                    <td>Fall 2023</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="Ionic with React, TypeScript, HTML, CSS">CS 360: Software Engineering</span></td>
+                    <td>Fall 2023</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="HTML, CSS">CITPT 117: Web Design Fundamentals</span></td>
+                    <td>Fall 2023</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="HTML, CSS">CITPT 111: Web Development Basics</span></td>
+                    <td>Fall 2023</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="R">CS 445: Databases and Knowledge Management</span></td>
+                    <td>Fall 2022</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="C++">CS 311: Algorithms and Data Structures</span></td>
+                    <td>Spring 2022</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="Command-line usage & scripting using a common shell, C/C++">CS 253: Introduction to Systems Programming</span></td>
+                    <td>Spring 2022</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="MIPS, C, Python">CS 250: Computer Organization and Architecture</span></td>
+                    <td>Fall 2021</td>
+                  </tr>
+                  <tr>
+                    <td>CS 101: CS Seminar</td>
+                    <td>Fall 2021</td>
+                  </tr>
+                  <tr>
+                    <td>BIOF 100: Introduction to Bioinformatics</td>
+                    <td>Fall 2021</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="C++">CS 211: Computer Science II</span></td>
+                    <td>Spring 2021</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="SQL - emphasis on database querying">CS 226: Structured Query Language (SQL)</span></td>
+                    <td>Fall 2020</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="Python">CS 111: Foundations of Programming</span></td>
+                    <td>Fall 2020</td>
+                  </tr>
+                  <tr>
+                    <td><span class="languages" data-hover="Processing, MIT App Inventor">CS 108: Introduction to Computer Science</span></td>
+                    <td>Spring 2019</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Mathematics</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Class</td>
+                    <td>Semester</td>
+                  </tr>
+                  <tr class="first">
+                    <td>MATH 490: Math History</td>
+                    <td>Spring 2023</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 480: Real Analysis I</td>
+                    <td>Spring 2023</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 340: Linear Algebra</td>
+                    <td>Spring 2023</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 313: Number Theory</td>
+                    <td>Fall 2022</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 460: Abstract Algebra</td>
+                    <td>Spring 2022</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 285: Euclidean Geometry</td>
+                    <td>Spring 2021</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 186: Discrete Mathematics</td>
+                    <td>Spring 2021</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 320: Probability and Statistics</td>
+                    <td>Fall 2020</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 300: Introduction to Mathematical Reasoning (proofs)</td>
+                    <td>Fall 2020</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 275: Calculus III</td>
+                    <td>Spring 2020</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 253: Statistical Methods</td>
+                    <td>Spring 2020</td>
+                  </tr>
+                  <tr>
+                    <td>MATH 175: Calculus II</td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Engineering</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Class</td>
+                    <td>Semester</td>
+                  </tr>
+                  <tr class="first">
+                    <td>ENGR 240: Circuits</td>
+                    <td>Spring 2021</td>
+                  </tr>
+                  <tr>
+                    <td>PHYS 212: Engineering Physics II</td>
+                    <td>Spring 2020</td>
+                  </tr>
+                  <tr>
+                    <td>ENGR 120: Introduction to Engineering Careers</td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr>
+                    <td>ENGR 210: Engineering Statics</td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr>
+                    <td>PHYS 211: Engineering Physics I</td>
+                    <td>Fall 2019</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>General STEM</td>
+                  </tr>
+                  <tr class="detail">
+                    <td>Class</td>
+                    <td>Semester</td>
+                  </tr>
+                  <tr class="first">
+                    <td>PHYS 205: Descriptive Astronomy</td>
+                    <td>Fall 2022</td>
+                  </tr>
+                  <tr>
+                    <td>CHEM 111: Principles of Chemistry I</td>
+                    <td>Spring 2019</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
+  
+        <footer>
+          <p>
+            Anna Steffens &copy; 2024 <br>
+            <a href="mailto:amsteffens@lcmail.lcsc.edu">Contact Me</a>
+            <!-- <a href="contactme.html">Contact Me</a> -->
+          </p>
+
+          <script>
+            function resetSems(currentSem) {
+              const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
+          
+              semesters.forEach(semester => {
+                const element = document.getElementById(`${semester}_classes`);
+                if (element.style.display === "block" && currentSem !== semester) {
+                  element.style.display = "none";
+                }
+              });
+            }
+          
+            document.getElementById("semesters_dropdown").addEventListener("change", function setSem() {
+              const selectedSemester = document.getElementById("semesters_dropdown").value;
+              console.log(`${selectedSemester} Selected`);
+          
+              resetSems(selectedSemester);
+              const elementToShow = document.getElementById(`${selectedSemester}_classes`);
+              if (elementToShow.style.display == "none") {
+                elementToShow.style.display = "block";
+              }
+            });
+          </script>
+
+        </footer>
+      </div>
+      
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/vendor/what-input.js"></script>
+      <script src="js/vendor/foundation.js"></script>
+      <script src="js/app.js"></script>
+    </body>
+</html>
