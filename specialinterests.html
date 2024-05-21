@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="media/content/favicon.png" type="image/x-icon">
-    <script src="js/vendor/jquery.js"></script>
   </head>
   <body>
     <header>
@@ -39,7 +38,6 @@
           <h3 id="theatre">Theatre</h3>
           <p>
             I have been an active part of Moscow Community Theatre since I was nine when I started as an actor. I have since delved into many different areas of the theatre, including the technical side, house management, stage management, and poster creation.  <br>
-            <span class="description">I created the posters below in collaboration with each show’s director.</span>
           </p>  
 
           <div class="work-feature-block grid-x grid-padding-x">
@@ -91,52 +89,8 @@
         </p>
       </footer>
     </div>
-    
-    <script>
-      $('.sim-thumb').on('click', function() {
-        let thmbSource = $(this).data('image');
-        let mainSource = $('#main-product-image').find('img').attr('src');
-
-        let thmbCap = $(this).data('caption');
-        let mainCap = $('#main-product-image').find('figcaption').html();
-
-        // Function to format caption
-        function formatCaption(caption) {
-            // Extract date from caption
-            let match = caption.match(/Created (\w+ \d{4})/);
-            if (match) {
-                let date = match[1];
-                return `Created in <span class="date">${date}</span>`;
-            }
-            return caption;
-        }
-
-        let formattedThmbCap = formatCaption(thmbCap);
-        let formattedMainCap = formatCaption(mainCap);
-
-        $('#main-product-image').find('figure').find('img').attr('src', thmbSource);
-        $(this).find('img').attr('src', mainSource);
-        $(this).data('image', mainSource);
-
-        $('#main-product-image').find('figcaption').html(formattedThmbCap);
-        $(this).data('caption', formattedMainCap);
-      })
-      
-
-      // $('.sim-thumb').on('click', function() {
-      //   // var figure = $('#main-product-figure figure');
-      //   // var imgSrc = $(this).find('img').attr('src');
-      //   // var captionText = $(this).find('figcaption').text();
-        
-      //   // // Update image source
-      //   // figure.find('img').attr('src', imgSrc);
-        
-      //   // // Update caption text
-      //   // figure.find('figcaption').text(captionText);
-      //   $('#main-product-figure').find('img').attr('src', $(this).find('img').attr('src'));
-      // });
-    </script>
-
+  
+    <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>

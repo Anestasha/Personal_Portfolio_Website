@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="media/content/favicon.png" type="image/x-icon">
-    <script src="js/vendor/jquery.js"></script>
   </head>
 
   <body>
@@ -136,23 +135,7 @@
       </footer>
     </div>
 
-    <script>
-      $('.sim-thumb').on('click', function() {
-        let thmbSource = $(this).data('image');
-        let mainSource = $('#main-product-image').find('img').attr('src');
-
-        let thmbCap = $(this).data('caption');
-        let mainCap = $('#main-product-image').find('figcaption').text();
-
-        $('#main-product-image').find('figure').find('img').attr('src', thmbSource);
-        $(this).find('img').attr('src', mainSource);
-        $(this).data('image', mainSource);
-
-        $('#main-product-image').find('figcaption').text(thmbCap);
-        $(this).data('caption', mainCap);
-
-      })
-    </script>
+    <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
