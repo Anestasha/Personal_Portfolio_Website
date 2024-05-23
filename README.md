@@ -1,10 +1,18 @@
 # Personal Portfolio
 ## Overview
-This repository contains the source code for my personal portfolio website, built using the Foundation framework. This personal portfolio website aims to provide visitors with information about my background and a comprehensive list of my academic history, projects, and special interests.
+This repository contains the source code for my personal portfolio website, built using the Foundation framework. This personal portfolio website aims to inform visitors about my background and a comprehensive list of my academic history, projects, and special interests.
 
 ## Development
 - The 'Featured Projects' and 'Special Interest' pages are in active development; several pre-existing projects need to be added to each page.
-- Actively researching Meta and YouTube APIs for embedded content.
+- Currently researching Meta and YouTube APIs for embedded content.
+
+**_Accessibility is a priority._** I frequently utilize the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site's accessibility and stay informed of any necessary improvements. I aim is to keep the site compliant with the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/WAI/WCAG22/quickref/). 
+
+**Needed Accessibility Improvements:**
+- **Video Alternate Content:** Provide text alternatives or transcripts for the videos on the site ([standard 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#audio-description-or-media-alternative-prerecorded)).
+- **Link Contrast:** Update styling to improve the color contrast of links ([standard 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#contrast-minimum)
+
+Any feedback and suggestions to further the accessibility of this project are welcome.
 
 ## Pages
 ### 1. Personal Overview
@@ -22,6 +30,8 @@ In each section, specific computer science classes are underlined. Hovering over
 This page focuses on personal interests outside of academics, including hobbies, volunteer projects, and personal creations. This page highlights these special interests, including reptile care, fiber arts, projects made for at-home use, and various other creative endeavors.
 
 ## Technologies
-- Foundation (HTML & CSS framework)
-  - Various Foundation Building Blocks (linked in the CSS where implemented)
+- [Foundation 6 (HTML & CSS framework)](https://get.foundation/sites/docs/)
+  - Foundation Building Blocks (Modified: custom styling, updated for Foundation 6):
+    - [Work Feature Block](https://get.foundation/building-blocks/blocks/work-feature-block.html)
+    - [Product Image Gallery](https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html)
 - JavaScript
