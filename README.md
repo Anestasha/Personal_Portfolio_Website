@@ -1,6 +1,6 @@
 # Personal Portfolio
 ## Overview
-This repository contains the source code for my personal portfolio website, built using the Foundation framework. This personal portfolio website aims to inform visitors about my background and a comprehensive list of my academic history, projects, and special interests.
+This repository contains the source code for my personal portfolio website, built using the Foundation framework. This personal portfolio website aims to provide visitors with information about my background and a comprehensive list of my academic history, projects, and special interests.
 
 ## Development
 - The 'Featured Projects' and 'Special Interest' pages are in active development; several pre-existing projects need to be added to each page.
@@ -9,7 +9,7 @@ This repository contains the source code for my personal portfolio website, buil
 **_Accessibility is a priority._** I frequently utilize the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site's accessibility and stay informed of any necessary improvements. I aim to keep the site compliant with the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/WAI/WCAG22/quickref/). 
 
 **Needed Accessibility Improvements:**
-- **Video Alternate Content:** Provide text alternatives or transcripts for the videos on the site ([standard 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#audio-description-or-media-alternative-prerecorded)).
+- **Video Alternate Content:** Provide text alternatives or transcripts for the videos on the site ([standard 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#audio-description-or-media-alternative-prerecorded))
 - **Link Contrast:** Update styling to improve the color contrast of links ([standard 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#contrast-minimum))
 
 Any feedback and suggestions to further the accessibility of this project are welcome.
