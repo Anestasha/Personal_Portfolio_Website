@@ -384,6 +384,13 @@ tbody, tr, td{
 	max-width: 50vw;
 }
 
+.work-feature-block-video {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+	max-width: 75vw;
+}
+
 .work-feature-block-header{
 	font-weight: bold;
 	padding-top: .5em;
@@ -431,6 +438,10 @@ tbody, tr, td{
 
 	.work-feature-block-header{
 		padding-top: 0;
+	}
+
+	.work-feature-block-video {
+		max-width: 45vw;
 	}
 }
 
