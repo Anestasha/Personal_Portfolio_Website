@@ -6,7 +6,7 @@ This repository contains the source code for my personal portfolio website, buil
 - The 'Featured Projects' and 'Special Interest' pages are in active development; several pre-existing projects need to be added to each page.
 - Currently researching Meta and YouTube APIs for embedded content.
 
-**_Accessibility is a priority._** I frequently utilize the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site's accessibility and stay informed of any necessary improvements. I aim is to keep the site compliant with the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/WAI/WCAG22/quickref/). 
+**_Accessibility is a priority._** I frequently utilize the [WAVE Web Accessibility Evaluation Tool](https://wave.webaim.org/) to check the site's accessibility and stay informed of any necessary improvements. I aim to keep the site compliant with the [Web Content Accessibility Guidelines (WCAG) 2.2](https://www.w3.org/WAI/WCAG22/quickref/). 
 
 **Needed Accessibility Improvements:**
 - **Video Alternate Content:** Provide text alternatives or transcripts for the videos on the site ([standard 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#audio-description-or-media-alternative-prerecorded)).
