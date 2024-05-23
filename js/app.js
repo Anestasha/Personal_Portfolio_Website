@@ -14,12 +14,9 @@ $('.sim-thumb').on('click', function() {
     //'Featured Projects' page, math pumpkin caption
     function formatPumpkinCaption(caption){
         let detailMatch = caption.split(" (");
-        console.log(detailMatch[1]);
         if(detailMatch[1]){
             let main = detailMatch[0];
             let details = detailMatch[1];
-            console.log("main: " + main);
-            console.log("details: " + details);
             return `${main} <br><span class="description">${details}</span>`;
         }
         return caption;
@@ -32,8 +29,6 @@ $('.sim-thumb').on('click', function() {
     //Get the image alt tags for the main and thumbnail images
     let thumbAlt = $(this).find('img').attr('alt');
     let mainAlt = $('#main-product-image').find('img').attr('alt');
-    console.log("thumb alt = " + thumbAlt);
-    console.log("main alt = " + mainAlt);
 
     //Get the captions for the main and thumbnail images
     let thumbCap = $(this).data('caption');
@@ -49,8 +44,6 @@ $('.sim-thumb').on('click', function() {
     }
 
     else if($(this).data('type') == 'poster'){
-        console.log($(this).data('type'));
-
         formattedThumbCap = formatPosterCaption(thumbCap);
         formattedMainCap = formatPosterCaption(mainCap);
     }
@@ -72,3 +65,30 @@ $('.sim-thumb').on('click', function() {
     $(this).data('image', mainSource);
     $(this).data('caption', formattedMainCap);
 })
+
+document.addEventListener("DOMContentLoaded", function setFirstSem() {
+    const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
+    semesters.forEach(semester => {
+      document.getElementById(`${semester}_classes`).style.display = semester === "sp24" ? "block" : "none";
+    });
+});
+
+function resetSems(currentSem) {
+    const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
+
+    semesters.forEach(semester => {
+      const element = document.getElementById(`${semester}_classes`);
+      if (element.style.display === "block" && currentSem !== semester) {
+        element.style.display = "none";
+      }
+    });
+}
+
+document.getElementById("semesters_dropdown").addEventListener("change", function setSem() {
+    const selectedSemester = document.getElementById("semesters_dropdown").value;
+    resetSems(selectedSemester);
+    const elementToShow = document.getElementById(`${selectedSemester}_classes`);
+    if (elementToShow.style.display == "none") {
+        elementToShow.style.display = "block";
+    }
+});

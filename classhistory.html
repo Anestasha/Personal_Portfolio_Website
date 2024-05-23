@@ -8,15 +8,6 @@
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/app.css">
     <link rel="icon" href="media/content/favicon.png" type="image/x-icon">
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function setFirstSem() {
-        const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
-        semesters.forEach(semester => {
-          document.getElementById(`${semester}_classes`).style.display = semester === "sp24" ? "block" : "none";
-        });
-      });
-    </script>
   </head>
 
   <body>
@@ -330,29 +321,6 @@
       </footer>
     </div>
     
-    <script>
-      function resetSems(currentSem) {
-        const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
-    
-        semesters.forEach(semester => {
-          const element = document.getElementById(`${semester}_classes`);
-          if (element.style.display === "block" && currentSem !== semester) {
-            element.style.display = "none";
-          }
-        });
-      }
-    
-      document.getElementById("semesters_dropdown").addEventListener("change", function setSem() {
-        const selectedSemester = document.getElementById("semesters_dropdown").value;
-        console.log(`${selectedSemester} Selected`);
-    
-        resetSems(selectedSemester);
-        const elementToShow = document.getElementById(`${selectedSemester}_classes`);
-        if (elementToShow.style.display == "none") {
-          elementToShow.style.display = "block";
-        }
-      });
-    </script>
     <script src="js/vendor/jquery.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
