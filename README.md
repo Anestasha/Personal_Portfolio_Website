@@ -10,7 +10,7 @@ This repository contains the source code for my personal portfolio website, buil
 
 **Needed Accessibility Improvements:**
 - **Video Alternate Content:** Provide text alternatives or transcripts for the videos on the site ([standard 1.2.3: Audio Description or Media Alternative (Prerecorded)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#audio-description-or-media-alternative-prerecorded)).
-- **Link Contrast:** Update styling to improve the color contrast of links ([standard 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#contrast-minimum)
+- **Link Contrast:** Update styling to improve the color contrast of links ([standard 1.4.3: Contrast (Minimum)](https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=123#contrast-minimum))
 
 Any feedback and suggestions to further the accessibility of this project are welcome.
 
