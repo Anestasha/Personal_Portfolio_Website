@@ -1,5 +1,8 @@
 $(document).foundation()
 
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                      Product Image Gallery Function                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 $('.sim-thumb').on('click', function() {
     //'Special Interests' page, theatre poster captions
     function formatPosterCaption(caption){
@@ -66,6 +69,9 @@ $('.sim-thumb').on('click', function() {
     $(this).data('caption', formattedMainCap);
 })
 
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                         Functions for the class page                              %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 document.addEventListener("DOMContentLoaded", function setFirstSem() {
     const semesters = ["sp19", "fa19", "sp20", "fa20", "sp21", "fa21", "sp22", "fa22", "sp23", "fa23", "sp24"];
     semesters.forEach(semester => {
