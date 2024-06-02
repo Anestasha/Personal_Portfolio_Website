@@ -5,9 +5,6 @@
 		2.b. Navigation
 		2.c. Footer
 
-		2.1: Media Queries for Global styles
-			-Contains content from 2.a-2.c.
-
 	3. Styles by page
 		3.a. Redirect Page
 		3.1. Personal Overview
@@ -84,6 +81,7 @@ section{
 	box-shadow: 0.3em 0.3em var(--darkest_gray_purple);
 }
 
+/*%%% Figures %%%*/
 figure{
 	border: 1px solid var(--darkest_purple);
 	padding: 0.5em;
@@ -97,10 +95,12 @@ figcaption{
 	margin-top: 0.2em;
 }
 
+/*%%% Span Classes %%%*/
 .date{
 	font-weight: bold;
 }
 
+/*%%% Slideshow Element %%%*/
 .slideshow{
 	padding: 0.2em;
 	border: 1px dotted var(--darkest_purple);
@@ -123,6 +123,90 @@ figcaption{
 
 .slideshow .inactive{
 	display: none;
+}
+
+/*%%% Building Block Elements %%%*/
+	/* Work Feature Block - Foundation Building Block
+		- https://get.foundation/building-blocks/blocks/work-feature-block.html */
+.work-feature-block {
+	padding: 10px;
+	border-top: 1px dotted var(--darkest_purple);
+	border-bottom: 1px dotted var(--darkest_purple);
+	border-radius: 2em;
+	align-items: center;
+}
+
+.work-feature-block-image {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+}
+
+.work-feature-block-phone-video {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+	max-width: 50vw;
+}
+
+.work-feature-block-video {
+	display: block;
+	margin: auto;
+	padding: 10px 0;
+	max-width: 75vw;
+}
+
+.work-feature-block-header{
+	font-weight: bold;
+	padding-top: .5em;
+}
+
+	/* Product Image Gallery - Foundation Building Block
+	- https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html */
+.product-image-gallery {
+	background-color: var(--lightest_purple);
+	border-radius: 1em;
+	padding: 1.5rem;
+	width: 100%;
+}
+
+.pdp-product-image {
+	margin-bottom: 20px;
+}
+
+.product-thumbs a {
+	margin-left: 8px;
+	margin-right: 8px;
+	padding: 0 !important;
+}
+
+.product-thumbs a img {
+	display: inline-block;
+	max-width: 100%;
+	margin-bottom: 1rem;
+	border: solid 4px #fefefe;
+	border-radius: 0;
+	box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
+	line-height: 0;
+	border-radius: 3px;
+	width: 50px;
+	height: 50px;
+	border: none;
+}
+
+/* Medium devices such as tablets (768px and up) */
+@media only screen and (min-width: 48em){
+	.work-feature-block-phone-video {
+		max-height: 40vh;
+	}
+
+	.work-feature-block-header{
+		padding-top: 0;
+	}
+
+	.work-feature-block-video {
+		max-width: 45vw;
+	}
 }
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -199,10 +283,6 @@ footer p{
 footer a{
 	color: white;
 }
-
-/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%   2.1. Media Queries     %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em){
@@ -417,91 +497,6 @@ table, tr, tbody{
 
 .thumbnail{
 	height: 10em;
-}
-
-/* Work Feature Block - Foundation Building Block
-	- https://get.foundation/building-blocks/blocks/work-feature-block.html
-*/
-.work-feature-block {
-	padding: 10px;
-	border-top: 1px dotted var(--darkest_purple);
-	border-bottom: 1px dotted var(--darkest_purple);
-	border-radius: 2em;
-	align-items: center;
-}
-
-.work-feature-block-image {
-	display: block;
-	margin: auto;
-	padding: 10px 0;
-}
-
-.work-feature-block-phone-video {
-	display: block;
-	margin: auto;
-	padding: 10px 0;
-	max-width: 50vw;
-}
-
-.work-feature-block-video {
-	display: block;
-	margin: auto;
-	padding: 10px 0;
-	max-width: 75vw;
-}
-
-.work-feature-block-header{
-	font-weight: bold;
-	padding-top: .5em;
-}
-
-/* Product Image Gallery - Foundation Building Block
-- https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html
-*/
-.product-image-gallery {
-	background-color: var(--lightest_purple);
-	border-radius: 1em;
-	padding: 1.5rem;
-	width: 100%;
-}
-
-.pdp-product-image {
-	margin-bottom: 20px;
-}
-
-.product-thumbs a {
-	margin-left: 8px;
-	margin-right: 8px;
-	padding: 0 !important;
-}
-
-.product-thumbs a img {
-	display: inline-block;
-	max-width: 100%;
-	margin-bottom: 1rem;
-	border: solid 4px #fefefe;
-	border-radius: 0;
-	box-shadow: 0 0 0 1px rgba(10, 10, 10, 0.2);
-	line-height: 0;
-	border-radius: 3px;
-	width: 50px;
-	height: 50px;
-	border: none;
-}
-
-/* Medium devices such as tablets (768px and up) */
-@media only screen and (min-width: 48em){
-	.work-feature-block-phone-video {
-		max-height: 40vh;
-	}
-
-	.work-feature-block-header{
-		padding-top: 0;
-	}
-
-	.work-feature-block-video {
-		max-width: 45vw;
-	}
 }
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
