@@ -1,34 +1,38 @@
 /* Organization:
 	1. Global variables
 	2. Global Styles
-		2.a. Navigation
-		2.b. Links
-		2.c. Generic (section, wrapper, etc.)
+		2.a. Generic/Global
+		2.b. Navigation
+		2.c. Footer
 
 		2.1: Media Queries for Global styles
 			-Contains content from 2.a-2.c.
+
 	3. Styles by page
-		1. Personal Overview
-		2. Classes
-		3. Highlighted Projects
-		4. Hobbies & Passions
+		3.a. Redirect Page
+		3.1. Personal Overview
+		3.2. Classes
+		3.3. Featured Projects
+		3.4. Special Interests
+		3.5. Contact Me
 */
 
 /* 		
-		Primary Color Theme
-			darkest purple #25064C
-			dark purple #36175E
-			purple #553285
-			light purple #7B52AB
-			lightest purple #9768D1
-		Secondary Theme (non-nav, non-footer links)
-			dark green [Visited] #325935
-			green [Link] #5E8C5D
-			pale green [hover] #97BF7A
-
+	Primary Color Theme
+		darkest purple #25064C
+		dark purple #36175E
+		purple #553285
+		light purple #7B52AB
+		lightest purple #9768D1
+	Secondary Theme (non-nav, non-footer links)
+		dark green [Visited] #325935
+		green [Link] #5E8C5D
+		pale green [hover] #97BF7A
 */
 
-/* global styles */
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			                     1. Global Variables                               	 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 :root{
 	--darkest_purple: #25064C;
 	--dark_purple: #36175E;
@@ -45,21 +49,61 @@
 	--lightest_gray_purple: #A58AE3;
 }
 
-/* Redirect Page */
-.redirect{
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			                     2. Global Styles                               	 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  2.a. Generic/Global   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+a:visited {
 	color: white;
-	font-size: 20pt;
-	text-align: center;
-	font-weight: bold;
-	background-color: var(--lightest_gray_purple);
-	padding-top: 2em;
-	padding-bottom: 2em;
-	border-radius: 1em;
 }
 
-/* Everything outside of media queries relates either to global styles or mobile */
+a{
+	color: var(--dark_green_Visited);
+	text-decoration-line: underline;
+}
 
-/* Navigation Menu */
+#wrapper{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+body{
+	background-image: url(../media/style/mathpattern_a.png), 
+	linear-gradient(90deg, rgba(85,50,133,1) 0%, rgba(151,104,209,1) 50%, rgba(85,50,133,1) 100%);
+	font-family: Verdana, Arial, sans-serif;
+}
+
+section{
+	background-color: var(--lightest_gray_purple);
+	border: 1px solid var(--darkest_purple);
+	border-radius: 1em;
+	padding: 0.5em;
+	box-shadow: 0.3em 0.3em var(--darkest_gray_purple);
+}
+
+figure{
+	border: 1px solid var(--darkest_purple);
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	margin-right: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+figcaption{
+	margin-top: 0.2em;
+}
+
+.date{
+	font-weight: bold;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   2.b. Navigation Menu   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 header{
 	background-color: var(--darkest_gray_purple);
 	box-shadow: 5px 5px var(--light_purple);
@@ -107,37 +151,10 @@ nav li{
 	color: white;
 	font-weight: bold;
 }
-  
-/* Global Styles - Created */
-a:visited {
-	color: white;
-}
 
-a{
-	color: var(--dark_green_Visited);
-	text-decoration-line: underline;
-}
-
-#wrapper{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-body{
-	background-image: url(../media/style/mathpattern_a.png), 
-	linear-gradient(90deg, rgba(85,50,133,1) 0%, rgba(151,104,209,1) 50%, rgba(85,50,133,1) 100%);
-	font-family: Verdana, Arial, sans-serif;
-}
-
-section{
-	background-color: var(--lightest_gray_purple);
-	border: 1px solid var(--darkest_purple);
-	border-radius: 1em;
-	padding: 0.5em;
-	box-shadow: 0.3em 0.3em var(--darkest_gray_purple);
-}
-
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%       2.c. Footer        %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 footer{
 	text-align: center;
 	margin-top: 1em;
@@ -158,6 +175,10 @@ footer p{
 footer a{
 	color: white;
 }
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   2.1. Media Queries     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em){
@@ -191,9 +212,32 @@ footer a{
 		flex-direction: row;
 		justify-content: space-evenly;
 	}
+
+	#wrapper{
+		width: 80%;
+	}
 }
 
-/* Personal Overview Page */
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%			                     3. Styles by Page                               	 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%   3.a. Redirect Page     %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+.redirect{
+	color: white;
+	font-size: 20pt;
+	text-align: center;
+	font-weight: bold;
+	background-color: var(--lightest_gray_purple);
+	padding-top: 2em;
+	padding-bottom: 2em;
+	border-radius: 1em;
+}
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  3.1. Personal Overview Page %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 #intro h2, #intro h3{
 	text-align: center;
 	font-weight: bold;
@@ -212,22 +256,12 @@ footer a{
 	text-indent: 0.5em;
 }
 
-/* Figure CSS applied to 'Special Interests' page */
-figure{
-	border: 1px solid var(--darkest_purple);
-	padding: 0.5em;
-	display: flex;
-	flex-direction: column;
-	margin-right: 0.5em;
-	margin-bottom: 0.5em;
+.grad_2020{
+	width: 40vw;
 }
 
-figcaption{
-	margin-top: 0.2em;
-}
-
-.date{
-	font-weight: bold;
+.grad_2024{
+	width: 30vw;
 }
 
 /* Medium devices such as tablets (768px and up) */
@@ -243,7 +277,9 @@ figcaption{
 	}
 }
 
-/* Classes Page */
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 	    3.2. Classes Page 	    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 #classes_by_semester{
 	display: flex;
 	align-items: center;
@@ -344,8 +380,9 @@ tbody, tr, td{
 	border-bottom: 2px solid var(--lightest_gray_purple);
 }
 
-/* Highlighted Projects Page */
-
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 3.3. Featured Projects Page	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 #projects h2, #projects h3, #projects h4, #projects h5{
 	font-weight: bold;
 }
@@ -359,10 +396,9 @@ tbody, tr, td{
 	height: 10em;
 }
 
-	/* Work Feature Block - Foundation Building Block
-		- https://get.foundation/building-blocks/blocks/work-feature-block.html
-	*/
-
+/* Work Feature Block - Foundation Building Block
+	- https://get.foundation/building-blocks/blocks/work-feature-block.html
+*/
 .work-feature-block {
 	padding: 10px;
 	border-top: 1px dotted var(--darkest_purple);
@@ -396,9 +432,9 @@ tbody, tr, td{
 	padding-top: .5em;
 }
 
-	/* Product Image Gallery - Foundation Building Block
-	- https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html
-	*/
+/* Product Image Gallery - Foundation Building Block
+- https://get.foundation/building-blocks/blocks/ecommerce-product-image-gallery.html
+*/
 .product-image-gallery {
 	background-color: var(--lightest_purple);
 	border-radius: 1em;
@@ -445,30 +481,14 @@ tbody, tr, td{
 	}
 }
 
-/* Large devices such as laptops (1024px and up) */
-@media only screen and (min-width: 64em){
-	
-}
-
-/* Largest devices such as desktops (1280px and up) */
-@media only screen and (min-width: 80em){
-
-}
-
-
-/* Hobbies & Passions Page */
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 3.4. Special Interests Page	%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 #posters{
 	display: flex;
 	/* flex-direction: column; */
 	justify-content: center;
 }
-
-
-	  
-	  
-
-
-
 
 /* Medium devices such as tablets (768px and up) */
 @media only screen and (min-width: 48em){
