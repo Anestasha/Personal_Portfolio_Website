@@ -101,6 +101,30 @@ figcaption{
 	font-weight: bold;
 }
 
+.slideshow{
+	padding: 0.2em;
+	border: 1px dotted var(--darkest_purple);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.slideshow .slide-nav p{
+	font-size: larger;
+	font-weight: bold;
+	padding-left: 0.2em;
+	padding-right: 0.2em;
+}
+
+.slideshow ul{
+	display: contents;
+	list-style: none; 
+}
+
+.slideshow .inactive{
+	display: none;
+}
+
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%   2.b. Navigation Menu   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
@@ -365,9 +389,8 @@ table, tr, tbody{
 	border: 2px solid var(--lightest_gray_purple);
 }
 
-tbody, tr, td{
-	/* border: 2px solid var(--lightest_gray_purple); */
-}
+/* tbody, tr, td{
+} */
 
 .detail{
 	font-weight: bold;
