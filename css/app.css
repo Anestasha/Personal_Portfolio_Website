@@ -102,23 +102,29 @@ figcaption{
 
 /*%%% Slideshow Element %%%*/
 .slideshow{
-	padding: 0.2em;
-	border: 1px dotted var(--darkest_purple);
+	padding: 0.4em;
+	border-top: 1px dotted var(--darkest_purple);
+	border-bottom: 1px dotted var(--darkest_purple);
+	border-radius: 2em;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 }
 
-.slideshow .slide-nav p{
+.slideshow button{
+	cursor: pointer;
 	font-size: larger;
 	font-weight: bold;
-	padding-left: 0.2em;
-	padding-right: 0.2em;
 }
 
 .slideshow ul{
 	display: contents;
-	list-style: none; 
+	list-style: none;
+}
+
+.slideshow .active{
+	padding-left: .3em;
+	padding-right: .3em;
 }
 
 .slideshow .inactive{
@@ -360,6 +366,7 @@ footer a{
 	text-indent: 0.5em;
 }
 
+/* Add to media query */
 .grad_2020{
 	width: 40vw;
 }

@@ -1,6 +1,38 @@
 $(document).foundation()
 
 /*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                             Slideshow Function                                    %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+$('.slide-nav').click(function() {
+    let forward = ($(this).hasClass('for')) ? 1 : 0;
+
+    let slides = $('.slideshow li').toArray();
+    let numSlides = slides.length;
+
+    for(let i = 0; i < numSlides; i++) {
+        const slide = $(slides[i]);
+        //Change the current slide's classes
+        if(slide.hasClass('active')){
+            slide.removeClass('active');
+            slide.addClass('inactive');
+
+            //Pick the next slide depending on direction
+            let newSlide;
+            if(forward)
+                newSlide = (i == numSlides - 1) ? $(slides[0]) : $(slides[i + 1]);
+            else
+                newSlide = (i == 0) ? $(slides[numSlides - 1]) : $(slides[i - 1]);
+            
+            //Change the new slide's classes
+            newSlide.addClass('active');
+            newSlide.removeClass('inactive');
+
+            break;
+        }
+    }
+})
+
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                      Product Image Gallery Function                               %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
 $('.sim-thumb').on('click', function() {
